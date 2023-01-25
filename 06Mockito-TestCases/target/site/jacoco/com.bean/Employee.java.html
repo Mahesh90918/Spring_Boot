@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Employee.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">06Mockito-TestCases</a> &gt; <a href="index.source.html" class="el_package">com.bean</a> &gt; <span class="el_source">Employee.java</span></div><h1>Employee.java</h1><pre class="source lang-java linenums">package com.bean;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = &quot;EMPLOYEESPRINGORM&quot;)
+//@Table(name = &quot;EMPOLYEE&quot;)
+
+public class Employee {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
+	int id;
+	
+	@Column
+	String name;
+	@Column
+	double salary;
+	@Column
+	String email;
+
+<span class="fc" id="L27">	public Employee() {</span>
+		// TODO Auto-generated constructor stub
+<span class="fc" id="L29">	}</span>
+
+	public Employee(int id, String name, double salary, String email) {
+<span class="fc" id="L32">		super();</span>
+<span class="fc" id="L33">		this.id = id;</span>
+<span class="fc" id="L34">		this.name = name;</span>
+<span class="fc" id="L35">		this.salary = salary;</span>
+<span class="fc" id="L36">		this.email = email;</span>
+<span class="fc" id="L37">	}</span>
+
+	public int getId() {
+<span class="fc" id="L40">		return id;</span>
+	}
+
+	public void setId(int id) {
+<span class="fc" id="L44">		this.id = id;</span>
+<span class="fc" id="L45">	}</span>
+
+	public String getName() {
+<span class="fc" id="L48">		return name;</span>
+	}
+
+	public void setName(String name) {
+<span class="fc" id="L52">		this.name = name;</span>
+<span class="fc" id="L53">	}</span>
+
+	public double getSalary() {
+<span class="fc" id="L56">		return salary;</span>
+	}
+
+	public String getEmail() {
+<span class="fc" id="L60">		return email;</span>
+	}
+
+	public void setEmail(String email) {
+<span class="fc" id="L64">		this.email = email;</span>
+<span class="fc" id="L65">	}</span>
+
+	public void setSalary(double salary) {
+<span class="fc" id="L68">		this.salary = salary;</span>
+<span class="fc" id="L69">	}</span>
+
+	@Override
+	public String toString() {
+<span class="fc" id="L73">		return &quot;Employee [id=&quot; + id + &quot;, name=&quot; + name + &quot;, salary=&quot; + salary + &quot;, email=&quot; + email + &quot;]&quot;;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
