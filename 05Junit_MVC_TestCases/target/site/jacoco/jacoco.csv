@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+05Junit_MVC_TestCases,com.bean,Employee,21,35,0,0,9,12,6,5,6,5
+05Junit_MVC_TestCases,com.test,EmployeeTest,31,0,2,0,8,0,3,0,2,0
+05Junit_MVC_TestCases,com.Service,EmployeeServiceImpl,0,27,0,0,0,9,0,6,0,6
+05Junit_MVC_TestCases,com.controller,EmployeeController,36,3,0,0,12,1,5,1,5,1
+05Junit_MVC_TestCases,com.dao,EmployeeHibernateTempleteDaoImpl,7,32,0,0,1,10,1,5,1,5

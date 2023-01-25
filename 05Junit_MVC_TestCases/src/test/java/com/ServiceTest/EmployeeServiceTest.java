@@ -42,7 +42,7 @@ public class EmployeeServiceTest {
 
 	@Test
 	public void deleteTest() {
-		employeeService.delete(29);
+		employeeService.delete(38);
 	}
 
 	public void findByIdTest() {
