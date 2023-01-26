@@ -1,5 +1,5 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-06Mockito-TestCases,com.bean,Employee,0,56,0,0,0,21,0,11,0,11
+06Mockito-TestCases,com.bean,Employee,84,112,17,9,19,32,14,12,1,12
 06Mockito-TestCases,com.Service,EmployeeServiceImpl,0,27,0,0,0,9,0,6,0,6
 06Mockito-TestCases,com.controller,EmployeeController,0,39,0,0,0,13,0,6,0,6
 06Mockito-TestCases,com.dao,EmployeeHibernateTempleteDaoImpl,0,39,0,0,0,11,0,6,0,6

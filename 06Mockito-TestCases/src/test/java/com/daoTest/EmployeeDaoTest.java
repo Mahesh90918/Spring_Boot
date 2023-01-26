@@ -80,15 +80,15 @@ public class EmployeeDaoTest {
 	public void deleteTest() {
 		Employee emp = new Employee();
 		emp.setId(1011);
-		emp.setName("asd");
-		emp.setSalary(1234);
-		emp.setEmail("qwert2sd");
+		emp.setName(null);
+		emp.setSalary(0);
+		emp.setEmail(null);
 		emp.getSalary();
 		emp.getEmail();
 		Integer id = mockitoListData().get(0).getId();
 		employeeDao.delete(id);
 
-//		verify(hbmTem, times(1)).delete(emp);
+		verify(hbmTem, times(1)).delete(emp);
 	}
 
 	@Test
