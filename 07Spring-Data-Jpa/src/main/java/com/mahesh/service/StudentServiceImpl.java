@@ -1,5 +1,6 @@
 package com.mahesh.service;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -64,6 +65,19 @@ public class StudentServiceImpl implements StudentService {
 	public List<Student> findAll() {
 		// TODO Auto-generated method stub
 		return studentRepositry.findAll();
+	}
+
+	@Override
+	public Student deleteById2(Integer sid) {
+		Iterator<Student> iterator = findAll().iterator();
+		while (iterator.hasNext()) {
+			Student stu = iterator.next();
+			if (stu.getSid() == sid) {
+				iterator.remove();
+				return stu; // returns the deleted resource back
+			}
+		}
+		return null;
 	}
 
 }

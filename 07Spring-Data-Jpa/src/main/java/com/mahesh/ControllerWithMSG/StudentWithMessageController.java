@@ -51,17 +51,17 @@ public class StudentWithMessageController {
 	public ResponseEntity<?> FindById(@PathVariable Integer sid) {
 		// TODO Auto-generated method stub
 		try {
-			return new ResponseEntity<>( HttpStatus.OK).ok(studentService.FindById(sid));
+			return new ResponseEntity<>(HttpStatus.OK).ok(studentService.FindById(sid));
 		} catch (Exception e) {
 			return new ResponseEntity<>("FindById Student Not Founded", HttpStatus.NOT_FOUND);
 		}
 	}
 
 	@GetMapping("/stu/findById1/{sid}")
-	public  ResponseEntity<?> FindById1(@PathVariable Integer sid) {
+	public ResponseEntity<?> FindById1(@PathVariable Integer sid) {
 		// MSG Not Working
 		try {
-			return new ResponseEntity<>(studentService.FindById1(sid),HttpStatus.OK);
+			return new ResponseEntity<>(studentService.FindById1(sid), HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<>("FindById1 Student Not Founded", HttpStatus.NOT_FOUND);
 		}
@@ -94,6 +94,16 @@ public class StudentWithMessageController {
 			return new ResponseEntity<>(studentService.findAll(), HttpStatus.OK);
 		} catch (Exception e) {
 			return new ResponseEntity<>("Data Not Founded", HttpStatus.BAD_REQUEST);
+		}
+	}
+
+	@DeleteMapping("/stu/deleteById2/{sid}")
+	public ResponseEntity<?> deleteById2(@PathVariable Integer sid) {
+		Student s = studentService.deleteById2(sid);
+		if (s == null) {
+			return new ResponseEntity<>("DeleteById Student Not Founded", HttpStatus.NOT_FOUND);
+		} else {
+			return new ResponseEntity<>("DeleteById Student Successfully", HttpStatus.OK);
 		}
 	}
 }

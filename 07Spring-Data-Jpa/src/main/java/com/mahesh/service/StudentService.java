@@ -21,5 +21,7 @@ public interface StudentService {
 
 	void deleteById(Integer sid);
 
+	Student deleteById2(Integer sid);
+
 	List<Student> findAll();
 }
