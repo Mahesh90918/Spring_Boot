@@ -88,7 +88,7 @@ public class StudentWithMessageController {
 		}
 	}
 
-	@GetMapping("/stu/findAll")
+	@GetMapping("/rest/stu/findAll")
 	public ResponseEntity<?> findAll() {
 		try {
 			return new ResponseEntity<>(studentService.findAll(), HttpStatus.OK);

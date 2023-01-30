@@ -22,6 +22,7 @@ import com.mahesh.bean.Student;
 @SpringBootTest
 public class IntegrationTest {
 
+	// Controller Integration Test Mean Complete flow of Application
 	@Autowired
 	StudentWithMessageController studentWithMessageController;
 
@@ -40,7 +41,6 @@ public class IntegrationTest {
 	}
 
 	@Test
-	@Disabled
 	public void add() {
 		Student student = new Student();
 		student.setSname("Siva");
