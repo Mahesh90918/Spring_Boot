@@ -48,10 +48,13 @@ public class WebSecurity {
 		http.authorizeHttpRequests().antMatchers("/home1", "/authenticate").permitAll()
 				.antMatchers("/v3/api-docs/**", "/configuration/ui", "/swagger-resources/**", "/configuration/security",
 						"/swagger-ui/**", "/webjars/**")
-				.permitAll().antMatchers("/saveRole","/saveUser","/user").hasAuthority("USER").antMatchers("/admin").hasAuthority("Admin")
-				.antMatchers("/common").hasAnyAuthority("Admin", "User").anyRequest().authenticated().and().formLogin()
-				.defaultSuccessUrl("/welcome", true).and().exceptionHandling().accessDeniedPage("/accessDenied").and()
-				.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).and().exceptionHandling()
+				.permitAll().antMatchers("/user").hasAuthority("USER").antMatchers("/admin")
+				.hasAuthority("Admin").antMatchers("/common").hasAnyAuthority("Admin", "User").anyRequest()
+				.authenticated().
+				and().formLogin().defaultSuccessUrl("/welcome", true).
+				and().exceptionHandling()
+				.accessDeniedPage("/accessDenied").and().logout()
+				.logoutRequestMatcher(new AntPathRequestMatcher("/logout")).and().exceptionHandling()
 				.authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		;
@@ -69,7 +72,7 @@ public class WebSecurity {
 				.and().build();
 
 	}
-	
+
 	@Bean
 	public BCryptPasswordEncoder encode() {
 		return new BCryptPasswordEncoder();
