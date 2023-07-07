@@ -28,9 +28,16 @@ public class State {
 	private String sname;
 
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	@JoinColumn(name = "scid")
+	@JoinColumn(name = "country_cid")
 	@JsonIgnore
 	Country country;
+
+//	@Override
+//	public String toString() {
+//		return "State [sid=" + sid + ", sname=" + sname + "]";
+//	}
+	
+	
 
 	
 
