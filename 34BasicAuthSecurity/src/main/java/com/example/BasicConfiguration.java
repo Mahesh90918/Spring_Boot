@@ -29,7 +29,7 @@ public class BasicConfiguration {
 			authorizeHttpRequests.antMatchers("/hello1","hello3").hasRole("USER");
 			authorizeHttpRequests.antMatchers("/hello2","hello3").hasRole("ADMIN");
 		});
-
+//  http.httpBasic();
 		http.formLogin();
 
 		return http.build();
